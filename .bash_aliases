@@ -16,3 +16,9 @@ alias c='cdandls'
 
 # much quicker to go up one directory, but it breaks 'cd -'
 alias x='c ..'
+
+# duh - disk usage here
+function duh(){
+        du -h -d 1 "$PWD/" 2>~/duh_null.tmp
+        rm -f ~/duh_null.tmp
+}
